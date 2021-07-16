@@ -74,6 +74,10 @@ const Menu: React.FC<NavProps> = ({
   links,
   profile,
   children,
+  cakeBelowIcon,
+  cakeBelowIconClassName,
+  hrefLogoIcon,
+  hrefLogoIconForMobile
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -121,6 +125,8 @@ const Menu: React.FC<NavProps> = ({
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
           href={homeLink?.href ?? "/"}
+          hrefLogoIcon={hrefLogoIcon}
+          hrefLogoIconForMobile={hrefLogoIconForMobile}
         />
         <Flex>
           <UserBlock account={account} login={login} logout={logout} />
@@ -140,6 +146,8 @@ const Menu: React.FC<NavProps> = ({
           cakePriceUsd={cakePriceUsd}
           pushNav={setIsPushed}
           links={links}
+          cakeBelowIcon={cakeBelowIcon}
+          cakeBelowIconClassName={cakeBelowIconClassName}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}

@@ -8,10 +8,18 @@ export const baseColors = {
   secondary: "#58c7e6",
   success: "#31D0AA",
   warning: "#FFB237",
+  darkgreen: "#679b80",
+  lightgreen : "#75b093",
+  bluecolor: "#536ef6",
+  greycolor: "#e5e5e5"
 };
 
 export const brandColors = {
   binance: "#F0B90B",
+  darkgreen: "#679b80",
+  lightgreen : "#75b093",
+  bluecolor: "#536ef6",
+  greycolor: "#e5e5e5"
 };
 
 export const lightColors: Colors = {

@@ -50,10 +50,14 @@ export interface PanelProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
   cakePriceUsd?: number;
+  cakeBelowIcon?: string;
+  cakeBelowIconClassName?: string;
   currentLang: string;
   langs: LangType[];
   setLang: (lang: LangType) => void;
   links: Array<MenuEntry>;
+  hrefLogoIcon?: string;
+  hrefLogoIconForMobile?: string;
 }
 
 export interface NavProps extends PanelProps {

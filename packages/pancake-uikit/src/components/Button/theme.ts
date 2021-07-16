@@ -53,4 +53,9 @@ export const styleVariants = {
     color: "primary",
     boxShadow: "none",
   },
+  [variants.DARKGREEN]: {
+    backgroundColor: "darkgreen",
+    color: "white",
+    boxShadow: "none",
+  },
 };

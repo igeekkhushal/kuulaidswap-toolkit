@@ -56,6 +56,10 @@ export type Colors = {
   textDisabled: string;
   textSubtle: string;
   borderColor: string;
+  darkgreen: string,
+  lightgreen :string,
+  bluecolor: string,
+  greycolor: string,
 
   // Gradients
   gradients: Gradients;

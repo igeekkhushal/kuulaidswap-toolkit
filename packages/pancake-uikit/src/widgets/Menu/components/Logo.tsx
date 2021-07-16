@@ -11,6 +11,8 @@ interface Props {
   isDark: boolean;
   togglePush: () => void;
   href: string;
+  hrefLogoIcon?: string;
+  hrefLogoIconForMobile?: string;
 }
 
 const blink = keyframes`
@@ -28,7 +30,7 @@ const StyledLink = styled(Link)`
     }
   }
   .desktop-icon {
-    width: 156px;
+    width: 260px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -48,12 +50,12 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, hrefLogoIcon, hrefLogoIconForMobile}) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      <LogoIcon className="mobile-icon" hrefLogoIconForMobile={hrefLogoIconForMobile}/>
+      <LogoWithText className="desktop-icon" isDark={isDark} hrefLogoIcon={hrefLogoIcon} />
     </>
   );
 
